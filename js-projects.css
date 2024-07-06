@@ -1,0 +1,382 @@
+/* ------------------------------------------------- Project 1 -------------------------------------------------------
+
+/* #container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    background-color: wheat;
+    height: 60vh;
+    width: 30vw;
+    margin-left: 450px;
+    margin-top: 100px;
+    border-radius: 10px;
+    border: 2px solid rgb(23, 228, 211);
+}
+
+h3 {
+    font-size: 35px;
+    font-family: cursive;
+}
+
+form {
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: cursive;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: cursive;
+}
+
+#output {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#user_input {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 700;
+} */
+
+/* #container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    background-color: wheat;
+    height: 60vh;
+    width: 40vw;
+    margin-left: 450px;
+    margin-top: 100px;
+    border-radius: 10px;
+    border: 2px solid rgb(23, 228, 211);
+    font-family: cursive;
+}
+
+h1 {
+    font-size: 35px;
+}
+
+
+
+form {
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: cursive;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: cursive;
+}
+
+#output {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#length {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 700;
+} */
+
+/* ----------------------- Project 4: Digital clock --------------*/
+/* 
+body {
+    text-align: center;
+    background-color: wheat;
+}
+
+#Clock {
+    font-size: 70px;
+    margin-top: 240px;
+    font-family: cursive;
+} */
+
+/* ----------------------- Project 5: Color Flipper ------------ */
+
+/* body {
+    text-align: center;
+}
+
+h1 {
+    font-family: cursive;
+    margin-top: 200px;
+    font-size: 50px;
+    font-weight: 700;
+
+}
+
+
+button {
+    margin-top: 40px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: cursive;
+    border: 2px solid rgb(23, 228, 211);
+/* } */
+
+/* ----------------------------------- Project 7: Stop watch ------------------------------ */
+
+/* body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: hsl(0, 0%, 90%);
+}
+
+/* Include the padding and border in an element's total width and height */
+
+/* Remove margins and padding from the list */
+/* ul {
+  margin: 0;
+  padding: 0;
+} */
+
+/* Style the list items */
+/* ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s; */
+
+/* make the list items unselectable */
+/* -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+} */
+
+/* Set all odd list items to a different color (zebra-stripes) */
+/* ul li:nth-child(odd) {
+  background: #f9f9f9;
+} */
+
+/* Darker background-color on hover */
+/* ul li:hover {
+  background: #ddd;
+} */
+
+/* When clicked on, add a background color and strike out text
+ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+/* ul li.checked::before {
+  content: 'Write Something!';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+} */
+
+/* Style the close button */
+/* .close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+  background-color: #f44336;
+  color: white;
+} */
+
+/* Style the header */
+/* .header {
+  background-color: #f44336;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+} */
+
+/* Clear floats after the header */
+/* .header:after {
+  content: "";
+  display: table;
+  clear: both;
+} */
+
+/* Style the input */
+/* input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+} */
+
+/* Style the "Add" button */
+/* .addBtn {
+  padding: 10px;
+  width: 25%;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+
+.addBtn:hover {
+  background-color: #bbb;
+}  
+
+
+
+.button-container {
+  display: flex;
+  background-color: rgb(27, 133, 219);
+  width: 250px;
+  height: 40px;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px,
+    rgba(27, 133, 219, 0.5) 5px 10px 15px;
+}
+
+.button {
+  outline: 0 !important;
+  border: 0 !important;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+}
+
+.icon {
+  font-size: 20px;
+}  */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Roboto", "Arial", sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+  padding: 0 16px;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.right-section {
+  width: 46%;
+  padding-left: 16px;
+}
+
+.middle-section {
+  padding-left: -9%;
+  display: flex;
+  align-items: center;
+}
+
+.middle-section form {
+  display: flex;
+  height: 40px;
+  width: 628px;
+}
+
+.middle-section input {
+  width: 100%;
+  border-radius: 50px 0 0 50px;
+  padding: 12px;
+  font-size: 1.6rem;
+  border-right: none;
+  border: 1px solid #d3d3d3;
+}
+
+.middle-section form button {
+  width: 68px;
+  border-left: none;
+  border: 1px solid #d3d3d3;
+  border-radius: 0 50px 50px 0;
+  cursor: pointer;
+}
+
+.middle-section form button:hover {
+  background-color: #f3f3f3b7;
+  transition: background-color 0.4s ease;
+}
+
+.middle-section .mic {
+  border-radius: 50%;
+  padding: 5px;
+  margin-left: 8px;
+  margin-right: 180px;
+  background-color: #f3f3f3;
+  font-size: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.middle-section .mic:hover {
+  background-color: #f81a1a;
+}
+
