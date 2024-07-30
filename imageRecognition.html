@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Image Recognition App with Immaga API</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <style>
+            @keyframes gradient-animation {
+                  0% {
+                        background-position: 0% 50%;
+                  }
+
+                  50% {
+                        background-position: 100% 50%;
+                  }
+
+                  100% {
+                        background-position: 0% 50%;
+                  }
+            }
+
+            .bg-gradient-animated {
+                  background: linear-gradient(270deg, #8122b0, #dc98fd, #f78e23, #8122b0);
+                  background-size: 600% 600%;
+                  animation: gradient-animation 8s ease infinite;
+            }
+      </style>
+      <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                  const imageInput = document.querySelector("#image-input");
+                  const resultContainer = document.querySelector("#result-container");
+                  const submitButton = document.querySelector("#submit-button");
+
+                  submitButton.addEventListener("click", function () {
+                        const image = imageInput.files[0];
+                        if (!image) {
+                              resultContainer.innerHTML = "<p class='text-red-500'>Please select an image file.</p>";
+                              return;
+                        }
+                        const formData = new FormData();
+                        formData.append("image", image);
+                        fetch("https://api.imagga.com/v2/tags", {
+                              method: "POST",
+                              headers: {
+                                    "Authorization": "Basic " + btoa("acc_9ab8ad76b742c20:7020fa078e6a492604fc6993d961f724"),
+                              },
+                              body: formData
+                        })
+                              .then(res => res.json())
+                              .then(data => {
+                                    console.log(data);
+                                    if (data.result && data.result.tags && data.result.tags.length > 1) {
+                                          const tags = data.result.tags[0].tag.en;
+                                          const tags2 = data.result.tags[1].tag.en;
+                                          const confidence = data.result.tags[0].confidence;
+                                          const confidence2 = data.result.tags[1].confidence.toFixed(2);
+                                          resultContainer.innerHTML = "<p class='text-3xl font-bold mb-4'>This is a " + tags + " image. It is " + confidence + " % confident. Or this is a " + tags2 + " image. It is " + confidence2 + " % confident.</p>";
+                                    } else {
+                                          resultContainer.innerHTML = "<p class='text-red-500'>Unable to recognize the image. Please try again with a different image.</p>";
+                                    }
+                              })
+                              .catch(error => {
+                                    console.error("Error:", error);
+                                    resultContainer.innerHTML = "<p class='text-red-500'>An error occurred while processing the image. Please try again later.</p>";
+                              });
+                  });
+            });
+      </script>
+</head>
+
+<body class="bg-gradient-animated">
+
+      <div class="flex justify-center items-center h-screen">
+            <div class="bg-white p-8 rounded-lg shadow-2xl shadow-violet-400 text-center">
+                  <h1 class="font-bold mb-5 first-letter:text-7xl text-5xl text-violet-500">Image Recognition App with
+                        Immaga API</h1>
+                  <input type="file" id="image-input"
+                        class="mb-4 mr-6 font-mono visited:text-violet-500 hover:text-violet-500">
+                  <button id="submit-button"
+                        class="relative cursor-pointer opacity-90 hover:opacity-100 transition-opacity p-[2px] bg-black rounded-[16px] bg-gradient-to-t from-[#8122b0] to-[#dc98fd] active:scale-95">
+                        <span
+                              class="w-full h-full flex items-center gap-2 px-8 py-3 bg-[#B931FC] text-white rounded-[14px] bg-gradient-to-t from-[#a62ce2] to-[#c045fc]">
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5" fill="none"
+                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2">
+                                    <path
+                                          d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3">
+                                    </path>
+                              </svg>Submit
+                        </span>
+                  </button>
+                  <div id="result-container" class="mt-4"></div>
+            </div>
+      </div>
+</body>
+
+</html>
