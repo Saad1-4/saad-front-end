@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>BMI Calculator</title>
+      <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+      <div class="bg-white p-8 rounded-lg shadow-lg">
+            <h1 class="text-2xl font-bold mb-4">BMI Calculator</h1>
+
+            <input type="text" id="weight" placeholder="Enter your weight (in kg)" class="p-2 my-4 text-xl w-1/2 shadow-md">
+
+            <input type="text" id="height" placeholder="Enter your height (in m)" class="p-2 my-4 text-xl w-1/2 shadow-md">
+            <button id="calculateBtn" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                  Calculate BMI
+            </button>
+            <div id="result" class="mt-4 text-lg"></div>
+      </div>
+      <script>
+            document.getElementById('calculateBtn').addEventListener('click', function () {
+                  const weight = document.getElementById('weight').value;
+                  const height = document.getElementById('height').value;
+
+                  if (weight === '' || height === '') {
+                        document.getElementById('result').innerHTML = 'Please enter valid values';
+                        return;
+                  }
+                  fetch(`http://127.0.0.1:8000/calculate_bmi/?height=${height}&weight=${weight}`)
+                        .then(response => response.json())
+                        .then(data => {
+                              document.getElementById('result').innerHTML = `BMI: ${data.bmi.toFixed(2)}<br>Message: ${data.message}`;
+
+                              // clear the input fields
+                              document.getElementById('weight').value = '';
+                              document.getElementById('height').value = '';
+                        })
+                        .catch(error => {
+                              document.getElementById('result').innerHTML = 'An error occurred: ' + error.message;
+                        });
+            });
+      </script>
+</body>
+
+</html>
