@@ -1,0 +1,255 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Landing Page</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <style>
+            body {
+                  margin: 0;
+                  padding: 0;
+                  font-family: 'Poppins', sans-serif;
+            }
+      </style>
+</head>
+<body>
+      <div class="bg-[url(grocify_img/images/image.png)] bg-cover bg-center bg-no-repeat min-h-screen relative">
+            <nav class="flex items-center px-24 py-3">
+
+                  <img src="grocify_img/images/logo.png" class="w-52">
+
+                  <ul class="flex-1 text-center text-white">
+                        <li class="inline-block list-none px-3"><a href="">Home</a></li>
+                        <li class="inline-block list-none px-3"><a href="">About</a></li>
+                        <li class="inline-block list-none px-3"><a href="">Contact</a></li>
+                        <li class="inline-block list-none px-3"><a href="">Features</a></li>
+                  </ul>
+
+                  <img src="grocify_img/images/cart.png" class="w-12">
+            </nav>
+
+            <div class=" text-white mt-36 ml-32 max-w-lg">
+                  <h1 class="text-6xl leading-normal font-semibold">Groceries<br>delivery in <span class="font-light text-red-300 ">15 min</span></h1>
+
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit, sunt alias obcaecati</p>
+
+                  <div class="mt-10">
+
+                        <div class="inline-block hover:scale-110 duration-300">
+
+                              <a href="" class="bg-yellow-400 px-8 py-3 rounded-full hover:bg-transparent hover:text-yellow-400 hover:border-2 hover:border-yellow-400 border border-transparent hover:scale-110 duration-300 mr-4">
+                              Order Now
+                              </a>
+
+                        </div>
+
+                        <div class="inline-block hover:scale-110 duration-300">
+                              <a href="" class="border-2 border-yellow-400 px-8 py-3 rounded-full hover:bg-yellow-400 hover:text-slate-200 hover:scale-110 duration-300">
+                              Download App
+                              
+                              <span class="text-2xl mt-1 ml-3">⇨</span>
+                              </a>
+
+                        </div>
+                  
+
+                  </div>
+
+                  <img src="grocify_img/images/grocery-image.png" class="absolute bottom-0 right-2 xl:w-[45%]">
+
+            </div>
+
+      </div> -->
+
+</body>
+
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Another Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        .Btn-Container {
+            display: flex;
+            width: 170px;
+            height: fit-content;
+            background-color: #1d2129;
+            border-radius: 40px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+            justify-content: space-between;
+            align-items: center;
+            border: none;
+            cursor: pointer;
+        }
+
+        .icon-Container {
+            width: 45px;
+            height: 45px;
+            background-color: #f59aff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            border: 3px solid #1d2129;
+        }
+
+        .text {
+            width: calc(170px - 45px);
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.1em;
+            letter-spacing: 1.2px;
+            font-weight: 500;
+        }
+
+        .icon-Container svg {
+            transition: transform 0.3s ease;
+        }
+
+        .Btn-Container:hover .icon-Container svg {
+            transform: translateX(5px);
+        }
+
+        nav ul li a {
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #38bdf8;
+            transform: scale(1.05);
+        }
+
+        /* Flexbox container for text and image */
+        .flex-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .flex-container img {
+            max-width: 100%;
+            height: auto;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="hero"
+        class="min-h-screen bg-[url('charlesdeluvio-pcZvxrAyYoQ-unsplash.jpg')] bg-cover bg-no-repeat bg-center relative">
+        <!-- fixed navbar on scroll -->
+        <nav
+            class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-24 py-4 border-b border-blue-200 bg-black bg-opacity-70 backdrop-blur-sm">
+            <img src="grocify_img/images/logo.png" class="w-52 hover:scale-105 cursor-pointer duration-300">
+            <ul class="flex-1 text-center text-white mr-32">
+                <li class="inline-block list-none px-3 text-xl font-medium"><a href="#">Home</a></li>
+                <li class="inline-block list-none px-3 text-xl font-medium"><a href="#">About</a></li>
+                <li class="inline-block list-none px-3 text-xl font-medium"><a href="#">Contact</a></li>
+                <li class="inline-block list-none px-3 text-xl font-medium"><a href="#">Features</a></li>
+            </ul>
+            <button class="Btn-Container hover:shadow-xl duration-300">
+                <span class="text">Start Trial</span>
+                <span class="icon-Container">
+                    <svg width="16" height="19" viewBox="0 0 16 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="1.61321" cy="1.61321" r="1.5" fill="black"></circle>
+                        <circle cx="5.73583" cy="1.61321" r="1.5" fill="black"></circle>
+                        <circle cx="5.73583" cy="5.5566" r="1.5" fill="black"></circle>
+                        <circle cx="9.85851" cy="5.5566" r="1.5" fill="black"></circle>
+                        <circle cx="9.85851" cy="9.5" r="1.5" fill="black"></circle>
+                        <circle cx="13.9811" cy="9.5" r="1.5" fill="black"></circle>
+                        <circle cx="5.73583" cy="13.4434" r="1.5" fill="black"></circle>
+                        <circle cx="9.85851" cy="13.4434" r="1.5" fill="black"></circle>
+                        <circle cx="1.61321" cy="17.3868" r="1.5" fill="black"></circle>
+                        <circle cx="5.73583" cy="17.3868" r="1.5" fill="black"></circle>
+                    </svg>
+                </span>
+            </button>
+        </nav>
+
+        <div class="flex-container max-w-[1200px] text-white mx-auto mt-[90px] px-10">
+            <div class="max-w-[600px]">
+                <h1 class="text-7xl leading-[50px] font-light">Connecting <span class="text-green-300">Devs
+                        <hr class="ml-[360px] mr-20 mt-4 border-2 border-green-300">
+                    </span> <br><span class="ml-20">with</span> <span class="text-red-300">Employees
+                        <hr class="mt-4 ml-56 mr-10 border-2 border-red-300">
+                    </span></h1>
+                <p class="mt-10 text-xl font-light text-amber-200">Amet minim mollit non deserunt ullamco est sit aliqua
+                    dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitar veniam consequat.</p>
+                <div class="mt-10 relative">
+                    <img src="search_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png"
+                        class="absolute top-0 left-0 ml-4 mt-5 mr-2 w-8">
+                    <input type="text"
+                        class="block w-full py-4 pr-24 text-white placeholder-gray-500 bg-black rounded-full pl-14 sm:py-5 border-2 border-t-sky-400 border-l-violet-400 border-r-violet-400 border-b-green-400 focus:outline-none text-xl"
+                        placeholder="Search Java Developers and more...">
+                    <button
+                        class="text-2xl font-bold text-white bg-red-300 px-7 rounded-full hover:bg-red-400 duration-300 absolute top-1/2 right-2 py-3 transform -translate-y-1/2">
+                        Find Devs</button>
+                </div>
+                <p class="text-xl font-light text-white mt-7">Trusted by 50k+ users</p>
+                <div class="flex">
+                    <img src="five-star-rating.png" class="w-24 mt-3">
+                    <p class="mt-[20px] text-lg font-light ml-4">4.5/5 <span class="text-slate-400 ml-3">(14.5
+                            reviews)</span></p>
+                </div>
+            </div>
+
+            <!-- Hero Image -->
+            <div class="w-[50%] ml-10">
+                <img src="grocify_img/images/grocery-image.png" class="w-full h-auto">
+            </div>
+        </div>
+
+        <section class="mt-20 bg-white flex justify-center items-center">
+            <!-- features -->
+            <div class="w-full mx-auto px-10 flex justify-center items-center">
+                <h1 class="text-4xl font-semibold">Our Features</h1>
+                <div class="grid grid-cols-3 gap-10 mt-10"></div>
+            
+            </div>
+        </section>
+            
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            setTimeout(function () {
+                $('.bg-white').removeClass('hidden');
+
+                // Blurring the background
+                $("#hero").addClass("opacity-40");
+
+                // Removing the cookies
+                $("#allow").click(function () {
+                    $('.bg-white').hide(500);
+                    $("#hero").removeClass("opacity-40");
+                });
+                $("#deny").click(function () {
+                    $('.bg-white').hide(500);
+                    $("#hero").removeClass("opacity-40");
+                });
+
+                $("#close").click(function () {
+                    $('.bg-white').hide(500);
+                    $("#hero").removeClass("opacity-40");
+                });
+            }, 4000);
+        });
+    </script>
+</body>
+
+</html>
